@@ -1,13 +1,18 @@
-<h1>User info</h1>
-<%= form_with model: Books do |f| %>
-  <h4>Name</h4>
-  <%= f.text_field :title %>
-  
-  <h4>Image</h4>
-  <%= f.file_field :image, accept: "image/*" %>
-	
-  <h4>Introduction</h4>
-  <%= f.text_area :body %>
-	
-  <%= f.submit 'Update User' %>
-<% end %>
+<div class ="container">
+  <div class ="row">
+      <h1>Editing Book</h1>
+      <%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+      <div class ="form-group">
+      <label for ="book_title">Title</label>
+       <%= f.text_field :title, class: "form_control book_title", id: "book_title" %>
+      </div>
+      <div class ="form-group">
+      <label for ="book_opinion">Opinion</label>
+       <%= f.text_area :body, class: "form_control book_body", id: "book_body" %>
+      </div>
+       <%= f.submit 'Create Book', class:"btn btn-lg btn-block btn-success mt-4" %>
+       <% end %>
+     </div>
+    </dev>
+  </div>
+</div>
