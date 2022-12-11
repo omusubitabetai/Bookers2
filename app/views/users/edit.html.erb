@@ -22,7 +22,7 @@
       <%= form_with model: @user, url: edit_user_path(@user.id), method: :patch do |f| %>
       <div class ="form-group">
       <label for ="user_name">Name</label>
-       <%= f.text_field :title, class: "form-control user_name", id: "user_name" %>
+       <%= f.text_field :name, class: "form-control user_name", id: "user_name" %>
       </div>
       <div class ="form-group">
       <label for ="user_image">Image</label>
@@ -30,7 +30,7 @@
       </div>
       <div class ="form-group">
       <label for ="user_introduction">Introduction</label>
-       <%= f.text_area :body, class: "form-control user_introduction", id: "user_introduction" %>
+       <%= f.text_area :introduction, class: "form-control user_introduction", id: "user_introduction" %>
       </div>
        <%= f.submit 'Update User', class:"btn btn-secondary" %>
        <% end %>

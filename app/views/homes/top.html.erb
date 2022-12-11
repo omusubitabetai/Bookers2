@@ -1,3 +1,28 @@
-<h1>Welcome to Bookers!!</h1>
+<body>
+  <header>
+    <nav class ="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class ="container">
+        <a class ="navbar-brand" href ="/">
+          <span>Bookers</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+</body>
 
-<button class="btn btn-primary" type="submit">Button</button>
+<main>
+  <p id ="notice"></p>
+  <div class ="container">
+    <div class ="row">
+      <h1 class ="px-3 mx-auto">
+        <storong>Welcome to Bookers!</storong>
+      </h1>
+    <div class ="btn-wrapper col-10 mx-auto">
+      <div class ="row">
+        <%= link_to "Log in", new_user_session_path, class:"btn btn-info btn-block mb-3 sign_in" %>
+        <%= link_to "Sign up", new_user_registration_path, class:"btn btn-success btn-sm btn-block sign_up" %>
+      </div>
+     </div>
+    </div>
+  </div>
+  <main>
